@@ -28,9 +28,7 @@ public class ProductServiceImpl implements ProductService{
 	public List<ProductVM> listHome() {
 		List<Product> listProduct = productRepository.getProductHome();
 		List<ProductVM> productvm = new ArrayList<>();
-		ProductVM pv ;
-				   
-		
+		ProductVM pv ;			   	
 		for (Product p : listProduct) {
 			pv = ProductDetailVM(p.getId());
 			
