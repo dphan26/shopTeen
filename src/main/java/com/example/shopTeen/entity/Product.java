@@ -48,8 +48,10 @@ public class Product {
 	
 	
 //	MAP
+	//OneToMany: 1 doi tuong product se co nhieu doi tuong OrderDetail, (co the la list, set)
+	//mappingBy: duoc hieu la se mapping voi bang OrderDetail thong qua thuoc tinh productId trong class Product
 	
-	@OneToMany(mappedBy="productId")
+	@OneToMany(mappedBy="productId")//1 product co nhieu orderdetail
 	private Set<OrderDetail> lstOrderDetail;
 	
 	@OneToMany(mappedBy="productId")

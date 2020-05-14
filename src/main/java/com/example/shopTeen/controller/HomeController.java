@@ -74,26 +74,14 @@ public class HomeController {
 	 public String home(Model model) {
 		List<Banner> theBanner = banner.findAll();
 		model.addAttribute("banners", theBanner);
-		List<ProductVM> abc = productService.listHome();		
-		 model.addAttribute("test", abc);	
-		//get list danh muc
+		//get danh muc san pham vd  product moi nhat, ban chay..
 		List<DisplayPosition> theDisplay = displayPositionService.getAll();
 		model.addAttribute("displays", theDisplay);		
-		 List<Support> supports = supportRepository.LstSupport();
-		 model.addAttribute("supports", supports);	
+	//	 List<Support> supports = supportRepository.LstSupport();
+	//	 model.addAttribute("supports", supports);	
 		 return "/home/index";  // tra ve trang index.jsp
 	}
 	
-	/*
-	@RequestMapping(value="/home/display_home_binding", method = RequestMethod.GET)
-    public ModelAndView List(Model model,HttpServletRequest request) {
-		int id = Integer.parseInt(request.getParameter("id"));
-		List<ProductVM> theProduct = productService.lstProductHome(id);
-	    model.addAttribute("products", theProduct);		
-	    ModelAndView mav = new ModelAndView("home/_list-home-products");
-        return mav;
-    }
-	*/
 	
 	@RequestMapping(value="/home/display_home_binding", method = RequestMethod.GET)
     public String List(Model model,HttpServletRequest request) {

@@ -30,7 +30,7 @@ public class ProductServiceImpl implements ProductService{
 		List<ProductVM> productvm = new ArrayList<>();
 		ProductVM pv ;			   	
 		for (Product p : listProduct) {
-			pv = ProductDetailVM(p.getId());
+			pv = productDetailVM(p.getId());
 			
 			//
 			productvm.add(pv);
@@ -42,31 +42,21 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public List<ProductVM> lstProductHome(int position) {
 		DisplayPosition dp = displayPositionRepository.findById(position).orElseThrow(null);
-		
-
-		//List<ProductDisplay> lst =  productRepository.DisplayHome(dp);
-		List<ProductDisplay> lst = productRepository.DisplayHome(dp);
-		 
-		List<ProductVM> rs = new ArrayList<ProductVM>();
-		
-		int i = 1;
-		for(ProductDisplay p : lst) {
-			
-			if (i <= 4) {
-				ProductVM pvm = ProductDetailVM(p.getProductId().getId());
-				rs.add(pvm);
-			}	
-			
-			i +=1;
-		}
-		
+		List<ProductDisplay> lst = productRepository.displayHome(dp);	 
+		List<ProductVM> rs = new ArrayList<ProductVM>();	
+		//get max 12 product to display 1 category
+		lst.stream().limit(12)
+					.forEach(x -> {
+						ProductVM pvm = productDetailVM(x.getProductId().getId());	//id product
+						rs.add(pvm);
+					});
 		
 		return rs;
 	}
 	
-	
+	//get information of 1 product
 	@Override
-	public ProductVM ProductDetailVM(int id) {
+	public ProductVM productDetailVM(int id) {
 		ProductVM pv = new ProductVM();
 		Product p = productRepository.ProductActive(id);
 		Date dateNow = new Date();			   
