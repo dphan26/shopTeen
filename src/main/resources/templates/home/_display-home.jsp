@@ -16,7 +16,10 @@
 						</div>
 					</div>
 
- 					<div th:id=" 'position-' + ${item.id}" class="row"></div> 
+ 					<div th:id=" 'position-' + ${item.id}" class="row">
+					<!-- display list product base on call ajax loadProduct()	
+					will return ve _list-home-products.jsp-->
+ 					</div> 
 				</div>
 			</div>
 		</div>
