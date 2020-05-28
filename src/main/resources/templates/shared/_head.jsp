@@ -9,7 +9,7 @@
 <!-- Font Css -->
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
-<link href="css/ionicons.min.css" type="text/css" rel="stylesheet">
+<!-- <link href="css/ionicons.min.css" type="text/css" rel="stylesheet"> -->
 <!-- Owl Css -->
 <link href="css/owl.carousel.min.css" type="text/css" rel="stylesheet">
 <link href="css/owl.theme.default.min.css" type="text/css" rel="stylesheet">

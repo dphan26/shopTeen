@@ -46,29 +46,7 @@ public class HomeController {
 	private CategoryRepository categoryRepository;
 	@Autowired
 	private TopicRepository topicRepository;
-	
-	/*
-	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	 public ModelAndView HomeX() {
-		 ModelAndView md = new ModelAndView("/home/index");
-		List<Banner> theBanner = banner.findAll();
-		//model.addAttribute("banners", theBanner);
-		md.addObject("banners", theBanner);
-		List<ProductVM> abc = productService.listHome();		
-		// model.addAttribute("test", abc);	
-		md.addObject("test", abc);
-		//get list danh muc
-		List<DisplayPosition> theDisplay = displayPositionService.getAll();
-		//model.addAttribute("displays", theDisplay);
-		md.addObject("displays", theDisplay);
-		
-		 List<Support> supports = supportRepository.LstSupport();
-		// model.addAttribute("supports", supports);	
-		 md.addObject("supports", supports);	
-		 return md;
-	}
-	*/
+
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	 public String home(Model model) {

@@ -1,23 +1,26 @@
 package com.example.shopTeen.controller;
 
-import java.util.List;
 
+
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
-import com.example.shopTeen.vm.ProductVM;
 
-@RestController
+
+
+@Controller
 public class ProductsController {
-	@GetMapping("/product/{productName}/{id}")
-	 public ModelAndView HomeX(Model model) {
+	//@GetMapping("/product/{productName}/{id}")
+	@GetMapping("/product/{id}")
+	 public String HomeX(Model model) {
 		//List<ProductVM> abc = productService.listHome();
 	//	 model.addAttribute("test", abc);	   
-		ModelAndView md = new ModelAndView("/products/detail");
-		 return md;
+		//json ket qua
+		//list 
+	return "/products/index_P";
 	}
+	
+
+	
 }

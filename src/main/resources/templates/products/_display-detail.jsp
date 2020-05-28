@@ -4,6 +4,6 @@
 
 
 <div>
-vcfdf
+detail-product
 </div>
 </th:block>

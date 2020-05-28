@@ -15,20 +15,27 @@
 									<div class="product-box common-cart-box text-center">
 										<!-- 	1. Display image product-->
 										<div class="product-img common-cart-img">
-											<img th:src="${item.imgUrl}" alt="product-img">
-											<!--                                         <div class="hover-option"> -->
-											<!--                                             <ul class="hover-icon"> -->
-											<!--                                                 <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> -->
-											<!--                                                 <li><a href="#"><i class="fa fa-heart"></i></a></li> -->
-											<!--                                                 <li><a href="#test-popup3" class="quickview-popup-link"><i class="fa fa-eye"></i></a></li> -->
-											<!--                                                 <li><a href="#"><i class="fa fa-refresh"></i></a></li> -->
-											<!--                                             </ul> -->
-											<!--                                             <ul class="product-color"> -->
-											<!--                                                 <li><a href="#" class="blue-dot"></a></li> -->
-											<!--                                                 <li><a href="#" class="black-dot"></a></li> -->
-											<!--                                                 <li><a href="#" class="pink-dot"></a></li> -->
-											<!--                                             </ul> -->
-											<!--                                         </div> -->
+											
+										<%-- 	<a th:if="${item.id != null}" target="_blank" th:href="'/product/' + ${item.id}" title="dam hoa tay">
+					                            <img th:if="${item.imgUrl != null}" th:src = "${item.imgUrl}" alt="">
+					                         
+                    					    </a> --%>
+                    					     <img th:if="${item.imgUrl != null}" th:src = "${item.imgUrl}" alt="">
+                    					
+										
+											                                        <!-- <div class="hover-option">
+											                                            <ul class="hover-icon">
+											                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+											                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+											                                                <li><a href="#test-popup3" class="quickview-popup-link"><i class="fa fa-eye"></i></a></li>
+											                                                <li><a href="#"><i class="fa fa-refresh"></i></a></li>
+											                                            </ul>
+											                                            <ul class="product-color">
+											                                                <li><a href="#" class="blue-dot"></a></li>
+											                                                <li><a href="#" class="black-dot"></a></li>
+											                                                <li><a href="#" class="pink-dot"></a></li>
+											                                            </ul>
+											                                        </div> -->
 										</div>
 
 
